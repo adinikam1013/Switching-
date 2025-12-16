@@ -1,0 +1,124 @@
+enable
+configure terminal
+hostname INBOM25CS1
+
+ip domain-name adityalab.com
+username admin privilege 15 secret qwertyuiop
+
+! Enable SSH v2
+ip ssh version 2
+
+! RSA key
+crypto key generate rsa general-keys modulus 1024
+
+ip routing
+
+!-- VLANs
+vlan 10
+ name Sales
+exit
+
+vlan 20
+ name HR
+exit
+
+vlan 30
+ name IT
+exit
+
+vlan 39
+ name Management
+exit
+
+!-- SVI interfaces
+interface vlan 10
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+exit
+
+interface vlan 20
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+exit
+
+interface vlan 30
+ ip address 192.168.30.1 255.255.255.0
+ no shutdown
+exit
+
+interface vlan 39
+ ip address 192.168.1.10 255.255.255.0
+ no shutdown
+exit
+
+! Access ports
+interface range gi1/0/1 - 6
+ switchport mode access
+ switchport access vlan 10
+ no shutdown
+exit
+
+interface range gi1/0/7 - 12
+ switchport mode access
+ switchport access vlan 20
+ no shutdown
+exit
+
+interface range gi1/0/13 - 18
+ switchport mode access
+ switchport access vlan 30
+ no shutdown
+exit
+
+! Management PC port
+interface gi1/0/24
+ switchport mode access
+ switchport access vlan 39
+ no shutdown
+exit
+
+! ---- TRUNK PORT TO SWITCH 2 ----
+interface gi1/1/4
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+
+! ---- DHCP POOLS ----
+ip dhcp pool SALES
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8
+exit
+
+ip dhcp pool HR
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 8.8.8.8
+exit
+
+ip dhcp pool IT
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ dns-server 8.8.8.8
+exit
+
+! Excluded addresses
+ip dhcp excluded-address 192.168.10.1
+ip dhcp excluded-address 192.168.20.1
+ip dhcp excluded-address 192.168.30.1
+
+! Enable SSH on VTY
+line vty 0 4
+ login local
+ transport input ssh
+
+! for history
+history size 256
+
+ line console 0
+  history size 256
+
+ line vty 0 4
+  history size 256
+exit
+

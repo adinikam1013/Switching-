@@ -1,0 +1,104 @@
+Section A: Basic Switching (Labs 1–10)
+1 Connect two PCs via a switch (basic connectivity)
+2 Configure switch hostname and basic settings
+3 Assign IP address to switch for remote management
+4 Save configuration and verify startup-config
+5 Configure and verify MAC address table
+6 Configure duplex and speed settings on switch ports
+7 Configure description on interfaces
+8 Configure and verify switchport modes (access/trunk)
+9 Configure VLANs and assign ports
+10Configure and verify default gateway on switch
+
+
+Section B: VLAN & Inter-VLAN (Labs 11–20)
+11 Create multiple VLANs and assign ports
+12 Configure VLAN names and verify
+13Configure trunk ports between switches
+14 Configure native VLAN on trunk
+15 Configure VLAN pruning
+16 Configure inter-VLAN routing using Router-on-a-Stick
+17 Configure inter-VLAN routing using Layer 3 switch
+18 Verify VLAN membership and connectivity
+19 Configure voice VLAN
+20 Configure VLAN security (restrict unused ports)
+
+
+Section C: Spanning Tree Protocol (Labs 21–30)
+21 Verify STP operation (default)
+22 Configure STP priority to set root bridge
+23 Configure STP portfast on access ports
+24 Configure BPDU Guard
+25 Configure BPDU Filter
+26 Configure Root Guard
+27 Configure Loop Guard
+28 Verify STP topology changes
+29 Configure Rapid PVST+
+30 Configure MST (Multiple Spanning Tree)
+
+
+Section D: EtherChannel & Link Aggregation (Labs 31–40)
+31 Configure static EtherChannel
+32 Configure EtherChannel using PAgP
+33 Configure EtherChannel using LACP
+34 Verify EtherChannel status
+35 Configure EtherChannel load balancing
+36 Troubleshoot EtherChannel misconfiguration
+37 Configure EtherChannel with trunk ports
+38 Configure EtherChannel with access ports
+39 Configure EtherChannel with STP
+40 Configure EtherChannel redundancy test
+
+
+Section E: Switch Security (Labs 41–55)
+41 Configure port security (static MAC)
+42 Configure port security (sticky MAC)
+43 Configure port security violation modes (shutdown/restrict/protect)
+44 Configure maximum MAC addresses per port
+45 Configure aging for sticky MAC
+46 Configure DHCP snooping
+47 Configure Dynamic ARP Inspection (DAI)
+48 Configure IP Source Guard
+49 Configure storm control
+50 Configure switchport security for unused ports
+51 Configure AAA authentication on switch
+52 Configure SSH for secure remote access
+53 Disable Telnet and enable SSH only
+54 Configure login banners
+55 Configure password encryption on switch
+
+
+Section F: Advanced Switching Features (Labs 56–70)
+56 Configure VTP (Server/Client/Transparent)
+57 Configure VTP pruning
+58 Configure VTP password
+59 Configure VTP version 2/3
+60 Configure Private VLANs
+61 Configure SPAN (Port Mirroring)
+62 Configure RSPAN (Remote SPAN)
+63 Configure VLAN ACLs (VACL)
+64 Configure QoS on switch ports
+65 Configure QoS trust boundaries
+66 Configure DSCP marking
+67 Configure policing on switch
+68 Configure shaping on switch
+69 Configure switch stacking (conceptual in PT)
+70 Configure switch redundancy (dual-switch HA)
+
+
+Section G: IPv6 & Multilayer Switching (Labs 71–75)
+71 Configure IPv6 address on switch
+72 Configure IPv6 VLAN interface
+73Configure IPv6 inter-VLAN routing
+74 Configure IPv6 ACL on switch
+75 Verify IPv6 neighbor discovery on switch
+
+
+Section H: Automation & Monitoring (Labs 76–80)
+76 Configure SNMP on switch
+77 Configure Syslog on switch
+78 Configure NTP on switch
+79 Configure CLI macros on switch
+80 Configure switch template deployment (conceptual in PT)
+
+
